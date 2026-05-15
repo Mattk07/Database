@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North Takistan Staff Database</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; scroll-behavior: smooth; }
+    body { background: #07090d; color: #fff; }
+    .sidebar { width: 280px; height: 100vh; position: fixed; background: #101014; border-right: 2px solid #7a1111; padding: 20px; overflow-y: auto; }
+    .logo { text-align: center; margin-bottom: 28px; padding-bottom: 18px; border-bottom: 1px solid #7a1111; }
+    .logo h1 { color: #ff3b3b; font-size: 32px; letter-spacing: 2px; }
+    .logo p { color: #aaa; font-size: 12px; margin-top: 6px; }
+    .nav-section { margin-bottom: 22px; }
+    .nav-section h3 { color: #ff3b3b; margin-bottom: 10px; font-size: 13px; text-transform: uppercase; border-bottom: 1px solid #282828; padding-bottom: 6px; }
+    .nav-section a { display: block; padding: 10px; margin-bottom: 6px; text-decoration: none; color: #e6e6e6; border-radius: 6px; transition: 0.2s; }
+    .nav-section a:hover { background: #7a1111; color: #fff; }
+    .main { margin-left: 280px; padding: 26px; }
+    section { margin-bottom: 38px; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; gap: 20px; }
+    .system-status { background: #251010; color: #ff6b6b; padding: 13px 18px; border-radius: 8px; font-weight: bold; border: 1px solid #7a1111; white-space: nowrap; }
+    .section-title { color: #fff; margin-bottom: 15px; border-left: 4px solid #ff3b3b; padding-left: 12px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 18px; margin-bottom: 20px; }
+    .card { background: #12151c; border: 1px solid #7a1111; border-radius: 12px; padding: 20px; box-shadow: 0 0 18px rgba(0,0,0,0.3); }
+    .card h2, .card h3 { color: #ff3b3b; margin-bottom: 12px; }
+    .card p, .card li { color: #d7d7d7; line-height: 1.55; margin-bottom: 6px; }
+    .card ul { margin-left: 18px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; background: #0d1117; border-radius: 10px; overflow: hidden; }
+    th { background: #7a1111; color: #fff; padding: 12px; text-align: left; font-size: 14px; }
+    td { padding: 12px; border-bottom: 1px solid #262b36; color: #ddd; font-size: 14px; }
+    .green { color: #52ff7a; font-weight: bold; }
+    .red { color: #ff5252; font-weight: bold; }
+    .amber { color: orange; font-weight: bold; }
+    .blue { color: #4da3ff; font-weight: bold; }
+    .purple { color: #c084fc; font-weight: bold; }
+    .badge { display: inline-block; padding: 4px 8px; border-radius: 999px; background: #7a1111; color: #fff; font-size: 12px; font-weight: bold; }
+    .locked { border-color: #aa0000; background: #190d0d; }
+    .template-box { background: #090c12; border: 1px dashed #ff3b3b; padding: 15px; border-radius: 10px; margin-top: 10px; color: #ddd; line-height: 1.5; }
+    .footer { margin-top: 35px; text-align: center; color: #777; font-size: 13px; padding: 25px; border-top: 1px solid #7a1111; }
+    @media (max-width: 900px) { .sidebar { position: relative; width: 100%; height: auto; } .main { margin-left: 0; } .topbar { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo"><h1>STAFF DB</h1><p>NORTH TAKISTAN ADMIN COMMAND</p></div>
+    <div class="nav-section"><h3>Dashboard</h3><a href="#home">Home</a><a href="#notices">Staff Notices</a><a href="#activity">Activity Overview</a><a href="#links">Quick Links</a></div>
+    <div class="nav-section"><h3>Staff Management</h3><a href="#roster">Staff Roster</a><a href="#ranks">Staff Ranks</a><a href="#permissions">Permissions</a><a href="#loa">LOA / Inactivity</a></div>
+    <div class="nav-section"><h3>Moderation</h3><a href="#tickets">Ticket Tracker</a><a href="#reports">Player Reports</a><a href="#punishments">Punishment Logs</a><a href="#appeals">Appeals</a></div>
+    <div class="nav-section"><h3>Operations</h3><a href="#events">Events</a><a href="#devlog">Dev / Bug Logs</a><a href="#meetings">Meeting Notes</a><a href="#training">Staff Training</a></div>
+    <div class="nav-section"><h3>Command</h3><a href="#reviews">Performance Reviews</a><a href="#internal">Internal Affairs</a><a href="#command">Management Hub</a></div>
+  </div>
+
+  <main class="main">
+    <section id="home">
+      <div class="topbar">
+        <div><h1>North Takistan Staff Database</h1><p style="color:#999;margin-top:5px;">Modern Staff Management, Moderation & Command System</p></div>
+        <div class="system-status">SYSTEM STATUS: ONLINE</div>
+      </div>
+      <div class="cards">
+        <div class="card"><h2>Staff Online</h2><p>Admins Online: 6</p><p>Moderators Online: 4</p><p>Support Online: 3</p><p>Developers Online: 2</p></div>
+        <div class="card"><h2>Today’s Workload</h2><p>Open Tickets: 14</p><p>Player Reports: 5</p><p>Pending Appeals: 3</p><p>Bug Reports: 9</p></div>
+        <div class="card"><h2>Community Status</h2><p class="green">Stable</p><p>Server Population: 92</p><p>Queue: 11</p><p>Staff Coverage: Good</p></div>
+        <div class="card"><h2>Priority Alerts</h2><p class="red">2 High Priority Reports</p><p class="amber">1 Staff Review Pending</p><p class="blue">New training intake open</p></div>
+      </div>
+    </section>
+
+    <section id="notices"><h2 class="section-title">Staff Notices</h2><div class="card"><table><tr><th>Date</th><th>Priority</th><th>Notice</th><th>Posted By</th></tr><tr><td>16/05/2026</td><td class="red">HIGH</td><td>All staff must log major punishments with evidence attached.</td><td>Management</td></tr><tr><td>16/05/2026</td><td class="amber">MEDIUM</td><td>Recruitment interviews are open for Support Team.</td><td>Staff Lead</td></tr><tr><td>15/05/2026</td><td class="green">LOW</td><td>New ticket response format has been added.</td><td>Admin Team</td></tr></table></div></section>
+
+    <section id="activity"><h2 class="section-title">Activity Overview</h2><div class="cards"><div class="card"><h3>Weekly Staff Activity</h3><p>Most Active: Miller</p><p>Tickets Closed: 42</p><p>Reports Handled: 18</p><p>Events Hosted: 3</p></div><div class="card"><h3>Coverage Gaps</h3><p class="amber">Low staff coverage between 3 AM - 8 AM AEST.</p><p>Recommended: recruit NA/EU support staff.</p></div><div class="card"><h3>Admin Response Time</h3><p>Average Ticket Response: 7 min</p><p>Average Report Review: 24 min</p><p class="green">Current performance: Good</p></div></div></section>
+
+    <section id="links"><h2 class="section-title">Quick Links</h2><div class="cards"><div class="card"><h3>Staff Tools</h3><ul><li>Discord Staff Panel</li><li>Report Form</li><li>Ban Appeal Form</li><li>Bug Report Form</li><li>Event Request Form</li></ul></div><div class="card"><h3>Documents</h3><ul><li>Staff Handbook</li><li>Server Rules</li><li>Punishment Guidelines</li><li>Roleplay Standards</li><li>Faction Guidelines</li></ul></div><div class="card"><h3>Databases</h3><ul><li>Player Notes</li><li>Ban Records</li><li>Warning Logs</li><li>Staff Reviews</li><li>Development Tasks</li></ul></div></div></section>
+
+    <section id="roster"><h2 class="section-title">Staff Roster</h2><div class="card"><table><tr><th>Name</th><th>Role</th><th>Department</th><th>Timezone</th><th>Status</th></tr><tr><td>Matt.k</td><td>Owner / Project Lead</td><td>Management</td><td>AEST</td><td class="green">Active</td></tr><tr><td>Pa3K</td><td>Developer</td><td>Development</td><td>EU</td><td class="green">Active</td></tr><tr><td>Miller</td><td>Senior Admin</td><td>Staff Team</td><td>AEST</td><td class="amber">Busy</td></tr><tr><td>Stewie</td><td>Moderator</td><td>Support</td><td>EU</td><td class="green">Active</td></tr><tr><td>Harrison</td><td>Trial Support</td><td>Support</td><td>NA</td><td class="amber">Training</td></tr></table></div></section>
+
+    <section id="ranks"><h2 class="section-title">Staff Rank Structure</h2><div class="cards"><div class="card locked"><h3>Ownership</h3><ul><li>Owner</li><li>Co-Owner</li><li>Project Lead</li></ul></div><div class="card"><h3>Management</h3><ul><li>Community Manager</li><li>Head Administrator</li><li>Staff Manager</li></ul></div><div class="card"><h3>Administration</h3><ul><li>Senior Administrator</li><li>Administrator</li><li>Trial Administrator</li></ul></div><div class="card"><h3>Moderation</h3><ul><li>Senior Moderator</li><li>Moderator</li><li>Trial Moderator</li><li>Support Team</li></ul></div></div></section>
+
+    <section id="permissions"><h2 class="section-title">Staff Permissions</h2><div class="card"><table><tr><th>Permission</th><th>Support</th><th>Moderator</th><th>Admin</th><th>Management</th></tr><tr><td>View Tickets</td><td class="green">Yes</td><td class="green">Yes</td><td class="green">Yes</td><td class="green">Yes</td></tr><tr><td>Issue Warnings</td><td class="red">No</td><td class="green">Yes</td><td class="green">Yes</td><td class="green">Yes</td></tr><tr><td>Temp Ban</td><td class="red">No</td><td class="amber">With Approval</td><td class="green">Yes</td><td class="green">Yes</td></tr><tr><td>Permanent Ban</td><td class="red">No</td><td class="red">No</td><td class="amber">With Approval</td><td class="green">Yes</td></tr><tr><td>Staff Discipline</td><td class="red">No</td><td class="red">No</td><td class="red">No</td><td class="green">Yes</td></tr></table></div></section>
+
+    <section id="loa"><h2 class="section-title">LOA / Inactivity Tracker</h2><div class="card"><table><tr><th>Name</th><th>Type</th><th>From</th><th>Until</th><th>Reason</th><th>Status</th></tr><tr><td>Pa3K</td><td>LOA</td><td>16/05</td><td>20/05</td><td>Work</td><td class="amber">Approved</td></tr><tr><td>Harrison</td><td>Reduced Activity</td><td>14/05</td><td>Ongoing</td><td>Personal</td><td class="amber">Monitoring</td></tr></table><div class="template-box"><b>LOA Template</b><br>Name:<br>Role:<br>Start Date:<br>End Date:<br>Reason:<br>Can you respond to urgent messages?:</div></div></section>
+
+    <section id="tickets"><h2 class="section-title">Ticket Tracker</h2><div class="card"><table><tr><th>Ticket ID</th><th>Type</th><th>Assigned Staff</th><th>Priority</th><th>Status</th></tr><tr><td>TK-001</td><td>Player Support</td><td>Stewie</td><td class="green">Low</td><td>Open</td></tr><tr><td>TK-002</td><td>Compensation</td><td>Miller</td><td class="amber">Medium</td><td>Waiting Evidence</td></tr><tr><td>TK-003</td><td>Staff Complaint</td><td>Matt.k</td><td class="red">High</td><td>Under Review</td></tr></table></div></section>
+
+    <section id="reports"><h2 class="section-title">Player Reports</h2><div class="card"><table><tr><th>Report ID</th><th>Reported Player</th><th>Reason</th><th>Evidence</th><th>Status</th></tr><tr><td>PR-001</td><td>John Smith</td><td>RDM</td><td>Clip Submitted</td><td class="amber">Reviewing</td></tr><tr><td>PR-002</td><td>Ahmed Kareem</td><td>Fail RP</td><td>Screenshots</td><td class="green">Closed</td></tr><tr><td>PR-003</td><td>Unknown</td><td>Combat Logging</td><td>Logs Required</td><td class="red">Pending Logs</td></tr></table></div></section>
+
+    <section id="punishments"><h2 class="section-title">Punishment Logs</h2><div class="card"><table><tr><th>Date</th><th>Player</th><th>Rule Broken</th><th>Punishment</th><th>Issued By</th></tr><tr><td>16/05</td><td>John Smith</td><td>RDM</td><td>24h Ban</td><td>Miller</td></tr><tr><td>15/05</td><td>Mike Carter</td><td>Combat Logging</td><td>Warning</td><td>Stewie</td></tr><tr><td>15/05</td><td>Ali Hassan</td><td>Fail RP</td><td>Verbal Warning</td><td>Matt.k</td></tr></table><div class="template-box"><b>Punishment Log Format</b><br>Player Name:<br>Steam/Xbox ID:<br>Rule Broken:<br>Evidence:<br>Punishment:<br>Staff Member:<br>Appealable: Yes/No</div></div></section>
+
+    <section id="appeals"><h2 class="section-title">Appeals</h2><div class="card"><table><tr><th>Appeal ID</th><th>Player</th><th>Original Punishment</th><th>Reviewer</th><th>Decision</th></tr><tr><td>AP-001</td><td>John Smith</td><td>24h Ban</td><td>Matt.k</td><td class="amber">Pending</td></tr><tr><td>AP-002</td><td>Mike Carter</td><td>Warning</td><td>Miller</td><td class="green">Accepted</td></tr><tr><td>AP-003</td><td>Unknown</td><td>Permanent Ban</td><td>Management</td><td class="red">Denied</td></tr></table></div></section>
+
+    <section id="events"><h2 class="section-title">Events</h2><div class="cards"><div class="card"><h3>Convoy Ambush Event</h3><p><span class="badge">PLANNED</span></p><p>NATO convoy transporting supplies through rebel territory.</p><p>Required Staff: 4</p></div><div class="card"><h3>Drug Raid Event</h3><p><span class="badge">READY</span></p><p>Scripted raid on suspected narcotics processing site.</p><p>Required Staff: 3</p></div><div class="card"><h3>Border Lockdown</h3><p><span class="badge">CONCEPT</span></p><p>Large-scale checkpoint RP with inspections and smuggling attempts.</p><p>Required Staff: 5</p></div></div></section>
+
+    <section id="devlog"><h2 class="section-title">Development / Bug Logs</h2><div class="card"><table><tr><th>ID</th><th>Issue</th><th>Area</th><th>Assigned</th><th>Status</th></tr><tr><td>BUG-001</td><td>Vehicle despawns after restart</td><td>Garage</td><td>Pa3K</td><td class="amber">Testing</td></tr><tr><td>BUG-002</td><td>ATM UI overlap on console</td><td>UI</td><td>Dev Team</td><td class="red">Open</td></tr><tr><td>MAP-003</td><td>Floating wall near Rasman</td><td>Map</td><td>Matt.k</td><td class="green">Fixed</td></tr></table></div></section>
+
+    <section id="meetings"><h2 class="section-title">Meeting Notes</h2><div class="card"><table><tr><th>Date</th><th>Topic</th><th>Summary</th><th>Action Items</th></tr><tr><td>16/05</td><td>Staff Standards</td><td>Discussed report handling and evidence requirements.</td><td>Update punishment guide.</td></tr><tr><td>13/05</td><td>Launch Prep</td><td>Reviewed server readiness, staff coverage and faction documents.</td><td>Finalize NATO SOPs.</td></tr></table><div class="template-box"><b>Meeting Template</b><br>Date:<br>Attendees:<br>Topics Discussed:<br>Decisions Made:<br>Action Items:<br>Next Meeting:</div></div></section>
+
+    <section id="training"><h2 class="section-title">Staff Training</h2><div class="cards"><div class="card"><h3>Support Training</h3><ul><li>How to respond to tickets</li><li>When to escalate reports</li><li>Basic rule knowledge</li><li>Professional communication</li></ul></div><div class="card"><h3>Moderator Training</h3><ul><li>Evidence review</li><li>Warning system</li><li>De-escalation</li><li>Compensation handling</li></ul></div><div class="card"><h3>Admin Training</h3><ul><li>Ban standards</li><li>Staff investigations</li><li>Event supervision</li><li>Conflict management</li></ul></div></div></section>
+
+    <section id="reviews"><h2 class="section-title">Performance Reviews</h2><div class="card"><table><tr><th>Staff</th><th>Tickets</th><th>Reports</th><th>Conduct</th><th>Review</th></tr><tr><td>Miller</td><td>28</td><td>12</td><td class="green">Good</td><td>Eligible for promotion</td></tr><tr><td>Stewie</td><td>18</td><td>7</td><td class="green">Good</td><td>Keep monitoring</td></tr><tr><td>Harrison</td><td>5</td><td>1</td><td class="amber">Training</td><td>Needs guidance</td></tr></table></div></section>
+
+    <section id="internal"><h2 class="section-title">Internal Affairs</h2><div class="card locked"><h2>Restricted Section</h2><p>Used for staff complaints, abuse reports, corruption allegations, misconduct investigations and command-level decisions.</p><table><tr><th>Case ID</th><th>Type</th><th>Status</th><th>Assigned</th></tr><tr><td>IA-001</td><td>Staff Complaint</td><td class="amber">Under Review</td><td>Management</td></tr><tr><td>IA-002</td><td>Abuse of Powers</td><td class="red">Priority</td><td>Owner Team</td></tr></table></div></section>
+
+    <section id="command"><h2 class="section-title">Management Hub</h2><div class="cards"><div class="card locked"><h3>Command Priorities</h3><ul><li>Finish staff handbook</li><li>Set final launch permissions</li><li>Recruit EU/NA staff coverage</li><li>Build player report workflow</li><li>Finalize punishment guide</li></ul></div><div class="card locked"><h3>Staff Promotions</h3><table><tr><th>Staff</th><th>Current</th><th>Recommended</th></tr><tr><td>Miller</td><td>Senior Admin</td><td>Head Admin</td></tr><tr><td>Stewie</td><td>Moderator</td><td>Senior Moderator</td></tr></table></div><div class="card locked"><h3>Launch Readiness</h3><p>Staff Team: 75%</p><p>Rules: 80%</p><p>Applications: 60%</p><p>Moderation System: 70%</p></div></div></section>
+
+    <div class="footer">NORTH TAKISTAN STAFF DATABASE • ADMIN COMMAND SYSTEM • INTERNAL USE ONLY</div>
+  </main>
+</body>
+</html>
